@@ -1,0 +1,13 @@
+@import '../main/main.component.scss';
+
+.site-header{
+  background-color: $primary-color;
+  padding: 10px;
+  @include widthAndheight(100%,70px);
+
+  .site-header__logo{
+    margin-top: 10px;
+    margin-left: 20px;
+    @include widthAndheight(120,45px);
+  }
+}////////////////////////////// End header section ///////////////////

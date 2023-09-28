@@ -1,0 +1,789 @@
+$primary-color: #10004F;
+$secundary-color: #FFFFFF;
+$tertiary-color: #E8114B;
+$quaternary-color:#5C5C5C;
+$primary-text-color: #10004F;
+$secundary-text-color: #5C5C5C;
+
+@mixin flexAlign($align){
+  display: flex;
+  align-items: $align;
+}
+
+@mixin widthAndheight($width, $height){
+  width: $width;
+  height: $height;
+}
+
+@mixin fontSizeAndWeight($size,$weight){
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin borderAndBorderRadius($border,$borderRadius){
+  border: $border;
+  border-radius: $borderRadius;
+}
+
+@mixin backgroundAndBorderRadiusStyles($background, $borderRadius){
+  background-color: $background;
+  border-radius: $borderRadius;
+}
+
+@mixin positionBoxStyles($position,$colorFont,$padding,$top,$left,$fontSize){
+  position: $position;
+  color: $colorFont;
+  padding: $padding;
+  top: $top;
+  left: $left;
+  font-size: $fontSize;
+}
+
+@mixin positionBoxStylesMobile($position,$colorFont,$top,$left,$fontSize){
+  position: $position;
+  color: $colorFont;
+  top: $top;
+  left: $left;
+  font-size: $fontSize;
+}
+
+.main{
+  position: relative;
+
+  .promotional__section{
+    position: relative;
+
+    .promotional__image--section{
+      @include widthAndheight(100%,300px);
+      object-fit: cover;
+      border-radius: 0 0 30px 30px;
+      filter: opacity(.7)
+    }
+
+    .promotional__h1--section {
+      @include positionBoxStyles(absolute,$primary-color, 10px,20px,30px,25px);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .promotional__a--section {
+      @include positionBoxStyles(absolute,$primary-color, 10px,170px,30px,18px);
+    }
+  }///////////////////////////////End promotional section//////////////////////////////
+
+  .products__section{
+    @include backgroundAndBorderRadiusStyles($secundary-color,10px);
+    @include flexAlign(center);
+    position: absolute;
+    top: 230px;
+    left: 20px;
+    padding: 5px;
+
+    .products__arrow-right,
+    .products__arrow-left{
+      display: none
+    }
+
+    .product__link{
+      @include flexAlign(center);
+      margin: 8px 8px;
+      color: $secundary-text-color;
+      text-decoration: none;
+      font-weight: 300;
+
+      &:hover{
+        color: $primary-text-color;
+      }
+
+      .product__icon{
+        margin: 8px;
+      }
+    }
+  }///////////////////////////////End products section//////////////////////////////
+
+  .search-flights__section{
+    @include backgroundAndBorderRadiusStyles($secundary-color,10px);
+    position: absolute;
+    top: 275px;
+    left:20px;
+    width: auto;
+    box-shadow: 0px 10px 8px #5c5c5c4b;
+
+    .search-flights__section--mobile{
+      display: none;
+    }
+
+    .search-flights__options{
+      margin: 5px 20px 10px 20px;
+      @include flexAlign(center);
+      justify-content: flex-start;
+
+      .search-flights__option{
+        margin: 20px;
+        font-weight: 300;
+        color: $primary-text-color;
+        @include flexAlign(center);
+
+        .search-flights__input{
+          @include widthAndheight(20px,20px);
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .choose-destination__section{
+      margin: 10px 20px 15px 20px;
+
+      .choose-destination__input--origin,
+      .choose-destination__input--destination{
+        padding: 15px;
+        margin-left: 10px;
+        width: 200px;
+        @include borderAndBorderRadius(1px solid #5c5c5c4b,5px);
+        font-family: 'Roboto', sans-serif;
+        @include fontSizeAndWeight(18px,300);
+      }
+
+      .choose-destination__option--departure{
+        margin-left: 40px;
+        color: $primary-color;
+        .choose-destination__input--departure{
+          padding: 15px;
+          width: 200px;
+          margin-left: 5px;
+          @include borderAndBorderRadius(1px solid #5c5c5c4b,5px);
+          font-family: 'Roboto', sans-serif;
+          @include fontSizeAndWeight(18px,300);
+        }
+      }
+
+      .choose-destination__option--comeback{
+
+        color: $secundary-text-color;
+
+        .choose-destination__input--comeback{
+          padding: 15px;
+          width: 200px;
+          margin-left: 5px;
+          border: 1px solid #5c5c5c4b;
+          font-family: 'Roboto', sans-serif;
+          @include fontSizeAndWeight(18px,300);
+          @include backgroundAndBorderRadiusStyles(#5c5c5c28,5px);
+        }
+      }
+
+      .choose-destination__button{
+        padding: 15px;
+        margin-left: 25px;
+        width: 150px;
+        border: none;
+        @include backgroundAndBorderRadiusStyles($tertiary-color,5px);
+        font-family: 'Roboto', sans-serif;
+        color: $secundary-color;
+        @include fontSizeAndWeight(18px,500);
+
+        &:hover{
+          opacity: 0.9;
+        }
+      }
+    }
+  }///////////////////////////////End search flights section//////////////////////////////
+
+  .support-services__section{
+    margin-top: 170px;
+    @include flexAlign(center);
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .support-services__link{
+      @include flexAlign(center);
+      justify-content: space-between;
+      @include borderAndBorderRadius(1px solid #5c5c5c4b,10px);
+      padding: 20px;
+      height: 20px;
+      margin: 10px;
+      text-decoration: none;
+      @include fontSizeAndWeight(15px,500);
+      transition: transform 0.3s ease;
+
+      &:hover{
+        transform: translateX(10px);
+      }
+
+      .support-services__icon{
+        margin-right: 10px;
+        @include backgroundAndBorderRadiusStyles(#5c5c5c28,20px);
+      }
+    }
+  }///////////////////////////////End support services section//////////////////////////////
+
+  .next-destination__section{
+
+    .next-destination__container--titles{
+      margin: 40px 0px 0px 40px;
+
+      .next-destination__h2{
+        font-weight: 500;
+        color: $primary-text-color;
+      }
+
+      .next-destination__p--miles{
+        @include fontSizeAndWeight(17px,400);
+        color: $secundary-text-color;
+        margin-bottom: 30px;
+      }
+
+      .next-destination__p--offers{
+        @include fontSizeAndWeight(17px,400);
+        @include flexAlign(center);
+        color: $secundary-text-color;
+
+        .next-destination__link{
+          color: #4658E5;
+          font-weight: 800;
+        }
+      }
+    }
+
+    .next-destination__container--card{
+    @include flexAlign(center);
+    justify-content: space-evenly;
+
+      .next-destination__card--cali{
+        position: relative;
+        transition: transform 0.3s ease;
+
+        &:hover{
+          transform: translateY(-5px);
+        }
+
+        .next-destination__img--cali{
+          @include widthAndheight(400px,200px);
+            object-fit: cover;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .next-destination__section--travel-date-cali{
+            @include backgroundAndBorderRadiusStyles(#DFE2F6,10px 10px 0px 0px);
+            position: absolute;
+            top: 170px;
+            @include widthAndheight(100%,40px);
+            @include flexAlign(center);
+            justify-content: flex-start;
+
+            .next-destination__p--travel-date-cali{
+              color: $secundary-text-color;
+              padding-left: 10px;
+            }
+        }
+
+        .next-destination__info--container-cali{
+            @include backgroundAndBorderRadiusStyles($secundary-color,5px 5px 10px 10px);
+            @include widthAndheight(400px,220px);
+            position: absolute;
+            box-shadow: 0px 10px 8px #5c5c5c4b;
+
+            .next-destination__info--cali{
+              margin-left: 10px;
+
+              .next-destination__info--city-cali{
+                color: $primary-text-color;
+                @include fontSizeAndWeight(30px,500);
+                margin-top: 5px;
+              }
+
+              .next-destination__info--one-way-cali{
+                font-size: 17px;
+                color: #4658E5;
+                @include backgroundAndBorderRadiusStyles(#4659e52d,20px);
+                padding: 5px;
+              }
+
+              .next-destination__info--economy-cali{
+                @include fontSizeAndWeight(17px,300);
+                @include backgroundAndBorderRadiusStyles(#5c5c5c4b,20px);
+                padding: 5px;
+                margin: 5px;
+              }
+
+              .next-destination__info--final-price-cali{
+                color: $secundary-text-color;
+                font-weight: 300;
+              }
+
+              .next-destination__info--arrow-cali{
+                display: flex;
+                justify-content: flex-start;
+
+                .next-destination__info--price-cali{
+                  @include fontSizeAndWeight(20px,800);
+                  color: $primary-text-color;
+                  margin-top: 5px;
+                }
+
+                .next-destination__info--icon-cali{
+                  @include backgroundAndBorderRadiusStyles($tertiary-color, 30px);
+                  margin-left: 180px;
+                }
+              }
+
+              .next-destination__info--taxes-cali{
+                color: $secundary-text-color;
+                font-weight: 300;
+                margin-right: 10px;
+                margin-top: 10px;
+              }
+
+              .next-destination__info--direct-flight-cali{
+                color: $secundary-text-color;
+                font-weight: 300;
+              }
+            }
+        }
+      }
+
+      .next-destination__card--sai{
+        position: relative;
+        transition: transform 0.3s ease;
+
+        &:hover{
+          transform: translateY(-5px);
+        }
+
+        .next-destination__img--sai{
+          @include widthAndheight(400px,200px);
+          object-fit: cover;
+          border-radius: 20px;
+          position: relative;
+        }
+
+        .next-destination__section--travel-date-sai{
+          position: absolute;
+          top: 170px;
+          @include widthAndheight(100%,40px);
+          @include backgroundAndBorderRadiusStyles(#DFE2F6, 10px 10px 0px 0px);
+          @include flexAlign(center);
+          justify-content: flex-start;
+
+          .next-destination__p--travel-date-sai{
+            color: $secundary-text-color;
+            padding-left: 10px;
+          }
+        }
+
+        .next-destination__info--container-sai{
+          @include backgroundAndBorderRadiusStyles($secundary-color,5px 5px 10px 10px);
+          @include widthAndheight(400px,220px);
+          position: absolute;
+          box-shadow: 0px 10px 8px #5c5c5c4b;
+
+          .next-destination__info--sai{
+            margin-left: 10px;
+
+            .next-destination__info--city-sai{
+              color: $primary-text-color;
+              @include fontSizeAndWeight(30px,500);
+              margin-top: 5px;
+            }
+
+            .next-destination__info--one-way-sai{
+              font-size: 17px;
+              color: #4658E5;
+              @include backgroundAndBorderRadiusStyles(#4659e52d,20px);
+              padding: 5px;
+            }
+
+            .next-destination__info--economy-sai{
+              @include fontSizeAndWeight(17px,300);
+              @include backgroundAndBorderRadiusStyles(#5c5c5c4b,20px);
+              padding: 5px;
+              margin: 5px;
+            }
+
+            .next-destination__info--final-price-sai{
+              color: $secundary-text-color;
+              font-weight: 300;
+            }
+
+            .next-destination__info--arrow-sai{
+              display: flex;
+              justify-content: flex-start;
+
+              .next-destination__info--price-sai{
+                @include fontSizeAndWeight(20px,800);
+                color: $primary-text-color;
+                margin-top: 5px;
+              }
+
+              .next-destination__info--icon-sai{
+                @include backgroundAndBorderRadiusStyles($tertiary-color,30px);
+                margin-left: 180px;
+              }
+            }
+
+            .next-destination__info--taxes-sai{
+              color: $secundary-text-color;
+              font-weight: 300;
+              margin-right: 10px;
+              margin-top: 10px;
+            }
+
+            .next-destination__info--direct-flight-sai{
+              color: $secundary-text-color;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
+      .next-destination__card--miami{
+        position: relative;
+        transition: transform 0.3s ease;
+
+        &:hover{
+          transform: translateY(-5px);
+        }
+
+        .next-destination__img--miami{
+          @include widthAndheight(400px,200px);
+          object-fit: cover;
+          border-radius: 20px;
+          position: relative;
+        }
+
+        .next-destination__section--travel-date-miami{
+          position: absolute;
+          top: 170px;
+          @include widthAndheight(100%,40px);
+          @include backgroundAndBorderRadiusStyles(#DFE2F6, 10px 10px 0px 0px);
+          @include flexAlign(center);
+          justify-content: flex-start;
+
+          .next-destination__p--travel-date-miami{
+            color: $secundary-text-color;
+            padding-left: 10px;
+          }
+        }
+
+        .next-destination__info--container-miami{
+          @include backgroundAndBorderRadiusStyles($secundary-color,5px 5px 10px 10px);
+          @include widthAndheight(400px,220px);
+          position: absolute;
+          box-shadow: 0px 10px 8px #5c5c5c4b;
+
+          .next-destination__info--miami{
+            margin-left: 10px;
+
+            .next-destination__info--city-miami{
+              color: $primary-text-color;
+              @include fontSizeAndWeight(30px,500);
+              margin-top: 5px;
+            }
+
+            .next-destination__info--one-way-miami{
+              font-size: 17px;
+              color: #4658E5;
+              @include backgroundAndBorderRadiusStyles(#4659e52d,20px);
+              padding: 5px;
+            }
+
+            .next-destination__info--economy-miami{
+              @include fontSizeAndWeight(17px,300);
+              @include backgroundAndBorderRadiusStyles(#5c5c5c4b,20px);
+              padding: 5px;
+              margin: 5px;
+            }
+
+            .next-destination__info--final-price-miami{
+              color: $secundary-text-color;
+              font-weight: 300;
+            }
+
+            .next-destination__info--arrow-miami{
+              display: flex;
+              justify-content: flex-start;
+
+              .next-destination__info--price-miami{
+                @include fontSizeAndWeight(20px,800);
+                color: $primary-text-color;
+                margin-top: 5px;
+              }
+
+              .next-destination__info--icon-miami{
+                @include backgroundAndBorderRadiusStyles($tertiary-color,30px);
+                margin-left: 180px;
+              }
+            }
+
+            .next-destination__info--taxes-miami{
+              color: $secundary-text-color;
+              font-weight: 300;
+              margin-right: 10px;
+              margin-top: 10px;
+            }
+
+            .next-destination__info--direct-flight-miami{
+              color: $secundary-text-color;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+
+    .next-destination__icons{
+      margin-top: 260px;
+      display: flex;
+      justify-content: center;
+
+      .next-destination__icon--arrow-left{
+        margin-right: 30px;
+        @include borderAndBorderRadius(1px solid $quaternary-color,30px);
+
+        &:hover{
+          background-color: $quaternary-color;
+          stroke: $secundary-color;
+        }
+      }
+
+      .next-destination__icon--arrow-right{
+        margin-left: 40px;
+        @include borderAndBorderRadius(1px solid $tertiary-color, 30px);
+
+        &:hover{
+          background-color: $tertiary-color;
+          stroke: $secundary-color;
+        }
+      }
+
+      .next-destination__dots{
+        @include flexAlign(center);
+      }
+    }
+  }///////////////////////////////End next destination section//////////////////////////////
+
+  .terms-conditions__section{
+    @include flexAlign(center);
+    justify-content: flex-end;
+    margin-right: 60px;
+
+    .terms-conditions__link{
+      text-decoration: none;
+      color: #4658E5;
+      @include flexAlign(center);
+    }
+  }///////////////////////////////End terms and conditions section//////////////////////////////
+}
+
+
+@media screen and (max-width: 320px) {
+  .main{
+
+    .promotional__section{
+
+      .promotional__image--section{
+        filter: sepia(30%);
+      }
+
+      .promotional__h1--section{
+        @include positionBoxStylesMobile(absolute,$secundary-color,5px,10px,20px);
+        font-weight: 300;
+      }
+
+      .promotional__a--section {
+        @include positionBoxStylesMobile(absolute,$secundary-color,190px,8px,18px);
+      }
+    } ///////////////////////////////End of the mobile promotional section//////////////////////////////
+
+    .products__section{
+      margin-top: 10px;
+      left: 5px;
+      right: 5px;
+
+      .products__arrow-left{
+        display: block;
+        @include backgroundAndBorderRadiusStyles(#5c5c5c4b,30px);
+        @include flexAlign(center);
+        @include widthAndheight(30px,30px);
+        justify-content: center;
+
+        .products__arrow--icon-left{
+          @include backgroundAndBorderRadiusStyles($quaternary-color,30px);
+          @include flexAlign(center);
+          justify-content: center;
+        }
+      }
+
+      .products__arrow-right{
+        display: block;
+        @include backgroundAndBorderRadiusStyles($tertiary-color,30px);
+        @include flexAlign(center);
+        justify-content: center;
+        @include widthAndheight(30px,30px);
+
+        .products__arrow--icon-right{
+          @include backgroundAndBorderRadiusStyles($secundary-color,30px);
+          @include flexAlign(center);
+          justify-content: center;
+        }
+      }
+
+      .product__link{
+        margin: 9px 10px;
+        .product__icon{
+          display: none;
+        }
+      }
+
+      .product__link--flights{
+        color: $primary-text-color;
+        font-weight: 600;
+        border-bottom: 2px solid $tertiary-color;
+      }
+
+      .product__link--cars,
+      .product__link--travel-insurance,
+      .product__link--upgrade{
+        display: none;
+      }
+    }///////////////////////////////End of the mobile products section//////////////////////////////
+
+    .search-flights__section{
+      top: 280px;
+      left: 5px;
+      right: 5px;
+      border-radius: 0px 0px 10px 10px;
+
+      .search-flights__section--mobile{
+        display: block;
+
+
+        .search-flights__h2--mobile{
+          color: $primary-text-color;
+          @include fontSizeAndWeight(20px,500);
+          text-align: center;
+          margin: 7px 0px 5px 0px;
+          font-style: oblique;
+        }
+
+        .search-flights__options--mobile{
+          @include flexAlign(center);
+          justify-content: space-evenly;
+          margin-bottom: 5px;
+
+          .search-flights__option--mobile{
+            @include flexAlign(center);
+            color: $secundary-text-color;
+            @include fontSizeAndWeight(15px,800);
+          }
+        }
+
+        .choose-destination__section--mobile{
+
+          .choose-destination__origin--mobile{
+            @include flexAlign(center);
+            justify-content: center;
+
+            .choose-destination__input--origin-mobile{
+              padding: 5px;
+              width: 170px;
+              margin: 5px 0px 10px 3px;
+              @include borderAndBorderRadius(1px solid #5c5c5c4b,5px);
+              font-family: 'Roboto', sans-serif;
+              @include fontSizeAndWeight(15px,300);
+
+            }
+
+          }
+
+          .choose-destination__destination--mobile{
+            @include flexAlign(center);
+            justify-content: center;
+
+            .choose-destination__input--destination-mobile{
+              padding: 5px;
+              width: 170px;
+              margin: 5px 0px 10px 3px;
+              @include borderAndBorderRadius(1px solid #5c5c5c4b,3px);
+              font-family: 'Roboto', sans-serif;
+              @include fontSizeAndWeight(15px,300);
+            }
+
+          }
+        }
+      }
+
+      .search-flights__options{
+        display: none;
+      }
+
+      .choose-destination__section{
+        display: none;
+      }
+    }///////////////////////////////End of the mobile search flights section//////////////////////////////
+
+    .support-services__section{
+      margin-top: 150px;
+      display: grid;
+      grid-template-columns: auto;
+    }///////////////////////////////End of the mobile support services section//////////////////////////////
+
+    .next-destination__section{
+
+      .next-destination__container--titles{
+        margin-left: 10px;
+      }
+
+      .next-destination__container--card{
+
+        .next-destination__card--cali{
+
+          .next-destination__img--cali{
+            @include widthAndheight(290px,200px);
+            object-fit: cover;
+            border-radius: 20px;
+            position: relative;
+          }
+
+          .next-destination__info--container-cali{
+            @include widthAndheight(290px,220px);
+            @include backgroundAndBorderRadiusStyles($secundary-color,5px 5px 10px 10px );
+            position: absolute;
+            box-shadow: 0px 10px 8px #5c5c5c4b;
+
+            .next-destination__info--cali{
+              .next-destination__info--arrow-cali{
+                display: flex;
+                justify-content: flex-start;
+
+                .next-destination__info--price-cali{
+                  @include fontSizeAndWeight(20px,800);
+                  color: $primary-text-color;
+                  margin-top: 5px;
+                }
+
+                .next-destination__info--icon-cali{
+                  @include widthAndheight(30px,30px);
+                  @include backgroundAndBorderRadiusStyles($tertiary-color,30px);
+                  margin-left: 80px;
+                }
+              }
+            }
+          }
+        }
+
+        .next-destination__card--sai,
+        .next-destination__card--miami{
+          display: none;
+        }
+      }
+    }///////////////////////////////End of the mobile next destination section//////////////////////////////
+
+    .terms-conditions__section{
+      @include flexAlign(center);
+      justify-content: center;
+      margin: 10px 0px 0px 0px;
+    }///////////////////////////////End of the mobile terms and conditions section//////////////////////////////
+  }
+}

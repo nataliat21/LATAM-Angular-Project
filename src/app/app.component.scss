@@ -1,0 +1,12 @@
+.header-navbar-container {
+  display: flex;
+  width: 100%;
+
+  .header-navbar-container__header,
+  .header-navbar-container__navbar {
+    flex-grow: 1;
+}
+}
+
+
+

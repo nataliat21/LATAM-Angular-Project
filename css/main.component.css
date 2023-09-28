@@ -1,0 +1,710 @@
+.main {
+  position: relative;
+}
+.main .promotional__section {
+  position: relative;
+}
+.main .promotional__section .promotional__image--section {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 0 30px 30px;
+  filter: opacity(0.7);
+}
+.main .promotional__section .promotional__h1--section {
+  position: absolute;
+  color: #10004F;
+  padding: 10px;
+  top: 20px;
+  left: 30px;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.main .promotional__section .promotional__a--section {
+  position: absolute;
+  color: #10004F;
+  padding: 10px;
+  top: 170px;
+  left: 30px;
+  font-size: 18px;
+}
+.main .products__section {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 230px;
+  left: 20px;
+  padding: 5px;
+}
+.main .products__section .products__arrow-right,
+.main .products__section .products__arrow-left {
+  display: none;
+}
+.main .products__section .product__link {
+  display: flex;
+  align-items: center;
+  margin: 8px 8px;
+  color: #5C5C5C;
+  text-decoration: none;
+  font-weight: 300;
+}
+.main .products__section .product__link:hover {
+  color: #10004F;
+}
+.main .products__section .product__link .product__icon {
+  margin: 8px;
+}
+.main .search-flights__section {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  position: absolute;
+  top: 275px;
+  left: 20px;
+  width: auto;
+  box-shadow: 0px 10px 8px rgba(92, 92, 92, 0.2941176471);
+}
+.main .search-flights__section .search-flights__section--mobile {
+  display: none;
+}
+.main .search-flights__section .search-flights__options {
+  margin: 5px 20px 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main .search-flights__section .search-flights__options .search-flights__option {
+  margin: 20px;
+  font-weight: 300;
+  color: #10004F;
+  display: flex;
+  align-items: center;
+}
+.main .search-flights__section .search-flights__options .search-flights__option .search-flights__input {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+.main .search-flights__section .choose-destination__section {
+  margin: 10px 20px 15px 20px;
+}
+.main .search-flights__section .choose-destination__section .choose-destination__input--origin,
+.main .search-flights__section .choose-destination__section .choose-destination__input--destination {
+  padding: 15px;
+  margin-left: 10px;
+  width: 200px;
+  border: 1px solid rgba(92, 92, 92, 0.2941176471);
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.main .search-flights__section .choose-destination__section .choose-destination__option--departure {
+  margin-left: 40px;
+  color: #10004F;
+}
+.main .search-flights__section .choose-destination__section .choose-destination__option--departure .choose-destination__input--departure {
+  padding: 15px;
+  width: 200px;
+  margin-left: 5px;
+  border: 1px solid rgba(92, 92, 92, 0.2941176471);
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.main .search-flights__section .choose-destination__section .choose-destination__option--comeback {
+  color: #5C5C5C;
+}
+.main .search-flights__section .choose-destination__section .choose-destination__option--comeback .choose-destination__input--comeback {
+  padding: 15px;
+  width: 200px;
+  margin-left: 5px;
+  border: 1px solid rgba(92, 92, 92, 0.2941176471);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: rgba(92, 92, 92, 0.1568627451);
+  border-radius: 5px;
+}
+.main .search-flights__section .choose-destination__section .choose-destination__button {
+  padding: 15px;
+  margin-left: 25px;
+  width: 150px;
+  border: none;
+  background-color: #E8114B;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 500;
+}
+.main .search-flights__section .choose-destination__section .choose-destination__button:hover {
+  opacity: 0.9;
+}
+.main .support-services__section {
+  margin-top: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main .support-services__section .support-services__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(92, 92, 92, 0.2941176471);
+  border-radius: 10px;
+  padding: 20px;
+  height: 20px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+.main .support-services__section .support-services__link:hover {
+  transform: translateX(10px);
+}
+.main .support-services__section .support-services__link .support-services__icon {
+  margin-right: 10px;
+  background-color: rgba(92, 92, 92, 0.1568627451);
+  border-radius: 20px;
+}
+.main .next-destination__section .next-destination__container--titles {
+  margin: 40px 0px 0px 40px;
+}
+.main .next-destination__section .next-destination__container--titles .next-destination__h2 {
+  font-weight: 500;
+  color: #10004F;
+}
+.main .next-destination__section .next-destination__container--titles .next-destination__p--miles {
+  font-size: 17px;
+  font-weight: 400;
+  color: #5C5C5C;
+  margin-bottom: 30px;
+}
+.main .next-destination__section .next-destination__container--titles .next-destination__p--offers {
+  font-size: 17px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  color: #5C5C5C;
+}
+.main .next-destination__section .next-destination__container--titles .next-destination__p--offers .next-destination__link {
+  color: #4658E5;
+  font-weight: 800;
+}
+.main .next-destination__section .next-destination__container--card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali:hover {
+  transform: translateY(-5px);
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__img--cali {
+  width: 400px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__section--travel-date-cali {
+  background-color: #DFE2F6;
+  border-radius: 10px 10px 0px 0px;
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__section--travel-date-cali .next-destination__p--travel-date-cali {
+  color: #5C5C5C;
+  padding-left: 10px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali {
+  background-color: #FFFFFF;
+  border-radius: 5px 5px 10px 10px;
+  width: 400px;
+  height: 220px;
+  position: absolute;
+  box-shadow: 0px 10px 8px rgba(92, 92, 92, 0.2941176471);
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali {
+  margin-left: 10px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--city-cali {
+  color: #10004F;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--one-way-cali {
+  font-size: 17px;
+  color: #4658E5;
+  background-color: rgba(70, 89, 229, 0.1764705882);
+  border-radius: 20px;
+  padding: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--economy-cali {
+  font-size: 17px;
+  font-weight: 300;
+  background-color: rgba(92, 92, 92, 0.2941176471);
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--final-price-cali {
+  color: #5C5C5C;
+  font-weight: 300;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--arrow-cali {
+  display: flex;
+  justify-content: flex-start;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--arrow-cali .next-destination__info--price-cali {
+  font-size: 20px;
+  font-weight: 800;
+  color: #10004F;
+  margin-top: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--arrow-cali .next-destination__info--icon-cali {
+  background-color: #E8114B;
+  border-radius: 30px;
+  margin-left: 180px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--taxes-cali {
+  color: #5C5C5C;
+  font-weight: 300;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--direct-flight-cali {
+  color: #5C5C5C;
+  font-weight: 300;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai:hover {
+  transform: translateY(-5px);
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__img--sai {
+  width: 400px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__section--travel-date-sai {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  height: 40px;
+  background-color: #DFE2F6;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__section--travel-date-sai .next-destination__p--travel-date-sai {
+  color: #5C5C5C;
+  padding-left: 10px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai {
+  background-color: #FFFFFF;
+  border-radius: 5px 5px 10px 10px;
+  width: 400px;
+  height: 220px;
+  position: absolute;
+  box-shadow: 0px 10px 8px rgba(92, 92, 92, 0.2941176471);
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai {
+  margin-left: 10px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai .next-destination__info--city-sai {
+  color: #10004F;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai .next-destination__info--one-way-sai {
+  font-size: 17px;
+  color: #4658E5;
+  background-color: rgba(70, 89, 229, 0.1764705882);
+  border-radius: 20px;
+  padding: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai .next-destination__info--economy-sai {
+  font-size: 17px;
+  font-weight: 300;
+  background-color: rgba(92, 92, 92, 0.2941176471);
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai .next-destination__info--final-price-sai {
+  color: #5C5C5C;
+  font-weight: 300;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai .next-destination__info--arrow-sai {
+  display: flex;
+  justify-content: flex-start;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai .next-destination__info--arrow-sai .next-destination__info--price-sai {
+  font-size: 20px;
+  font-weight: 800;
+  color: #10004F;
+  margin-top: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai .next-destination__info--arrow-sai .next-destination__info--icon-sai {
+  background-color: #E8114B;
+  border-radius: 30px;
+  margin-left: 180px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai .next-destination__info--taxes-sai {
+  color: #5C5C5C;
+  font-weight: 300;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--sai .next-destination__info--container-sai .next-destination__info--sai .next-destination__info--direct-flight-sai {
+  color: #5C5C5C;
+  font-weight: 300;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami:hover {
+  transform: translateY(-5px);
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__img--miami {
+  width: 400px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__section--travel-date-miami {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  height: 40px;
+  background-color: #DFE2F6;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__section--travel-date-miami .next-destination__p--travel-date-miami {
+  color: #5C5C5C;
+  padding-left: 10px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami {
+  background-color: #FFFFFF;
+  border-radius: 5px 5px 10px 10px;
+  width: 400px;
+  height: 220px;
+  position: absolute;
+  box-shadow: 0px 10px 8px rgba(92, 92, 92, 0.2941176471);
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami {
+  margin-left: 10px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami .next-destination__info--city-miami {
+  color: #10004F;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami .next-destination__info--one-way-miami {
+  font-size: 17px;
+  color: #4658E5;
+  background-color: rgba(70, 89, 229, 0.1764705882);
+  border-radius: 20px;
+  padding: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami .next-destination__info--economy-miami {
+  font-size: 17px;
+  font-weight: 300;
+  background-color: rgba(92, 92, 92, 0.2941176471);
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami .next-destination__info--final-price-miami {
+  color: #5C5C5C;
+  font-weight: 300;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami .next-destination__info--arrow-miami {
+  display: flex;
+  justify-content: flex-start;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami .next-destination__info--arrow-miami .next-destination__info--price-miami {
+  font-size: 20px;
+  font-weight: 800;
+  color: #10004F;
+  margin-top: 5px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami .next-destination__info--arrow-miami .next-destination__info--icon-miami {
+  background-color: #E8114B;
+  border-radius: 30px;
+  margin-left: 180px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami .next-destination__info--taxes-miami {
+  color: #5C5C5C;
+  font-weight: 300;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.main .next-destination__section .next-destination__container--card .next-destination__card--miami .next-destination__info--container-miami .next-destination__info--miami .next-destination__info--direct-flight-miami {
+  color: #5C5C5C;
+  font-weight: 300;
+}
+.main .next-destination__section .next-destination__icons {
+  margin-top: 260px;
+  display: flex;
+  justify-content: center;
+}
+.main .next-destination__section .next-destination__icons .next-destination__icon--arrow-left {
+  margin-right: 30px;
+  border: 1px solid #5C5C5C;
+  border-radius: 30px;
+}
+.main .next-destination__section .next-destination__icons .next-destination__icon--arrow-left:hover {
+  background-color: #5C5C5C;
+  stroke: #FFFFFF;
+}
+.main .next-destination__section .next-destination__icons .next-destination__icon--arrow-right {
+  margin-left: 40px;
+  border: 1px solid #E8114B;
+  border-radius: 30px;
+}
+.main .next-destination__section .next-destination__icons .next-destination__icon--arrow-right:hover {
+  background-color: #E8114B;
+  stroke: #FFFFFF;
+}
+.main .next-destination__section .next-destination__icons .next-destination__dots {
+  display: flex;
+  align-items: center;
+}
+.main .terms-conditions__section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 60px;
+}
+.main .terms-conditions__section .terms-conditions__link {
+  text-decoration: none;
+  color: #4658E5;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 320px) {
+  .main .promotional__section .promotional__image--section {
+    filter: sepia(30%);
+  }
+  .main .promotional__section .promotional__h1--section {
+    position: absolute;
+    color: #FFFFFF;
+    top: 5px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .main .promotional__section .promotional__a--section {
+    position: absolute;
+    color: #FFFFFF;
+    top: 190px;
+    left: 8px;
+    font-size: 18px;
+  }
+  .main .products__section {
+    margin-top: 10px;
+    left: 5px;
+    right: 5px;
+  }
+  .main .products__section .products__arrow-left {
+    display: block;
+    background-color: rgba(92, 92, 92, 0.2941176471);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+  }
+  .main .products__section .products__arrow-left .products__arrow--icon-left {
+    background-color: #5C5C5C;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .products__section .products__arrow-right {
+    display: block;
+    background-color: #E8114B;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+  .main .products__section .products__arrow-right .products__arrow--icon-right {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .products__section .product__link {
+    margin: 9px 10px;
+  }
+  .main .products__section .product__link .product__icon {
+    display: none;
+  }
+  .main .products__section .product__link--flights {
+    color: #10004F;
+    font-weight: 600;
+    border-bottom: 2px solid #E8114B;
+  }
+  .main .products__section .product__link--cars,
+  .main .products__section .product__link--travel-insurance,
+  .main .products__section .product__link--upgrade {
+    display: none;
+  }
+  .main .search-flights__section {
+    top: 280px;
+    left: 5px;
+    right: 5px;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .main .search-flights__section .search-flights__section--mobile {
+    display: block;
+  }
+  .main .search-flights__section .search-flights__section--mobile .search-flights__h2--mobile {
+    color: #10004F;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin: 7px 0px 5px 0px;
+    font-style: oblique;
+  }
+  .main .search-flights__section .search-flights__section--mobile .search-flights__options--mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+  }
+  .main .search-flights__section .search-flights__section--mobile .search-flights__options--mobile .search-flights__option--mobile {
+    display: flex;
+    align-items: center;
+    color: #5C5C5C;
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .main .search-flights__section .search-flights__section--mobile .choose-destination__section--mobile .choose-destination__origin--mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .search-flights__section .search-flights__section--mobile .choose-destination__section--mobile .choose-destination__origin--mobile .choose-destination__input--origin-mobile {
+    padding: 5px;
+    width: 170px;
+    margin: 5px 0px 10px 3px;
+    border: 1px solid rgba(92, 92, 92, 0.2941176471);
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .main .search-flights__section .search-flights__section--mobile .choose-destination__section--mobile .choose-destination__destination--mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .search-flights__section .search-flights__section--mobile .choose-destination__section--mobile .choose-destination__destination--mobile .choose-destination__input--destination-mobile {
+    padding: 5px;
+    width: 170px;
+    margin: 5px 0px 10px 3px;
+    border: 1px solid rgba(92, 92, 92, 0.2941176471);
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .main .search-flights__section .search-flights__options {
+    display: none;
+  }
+  .main .search-flights__section .choose-destination__section {
+    display: none;
+  }
+  .main .support-services__section {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .main .next-destination__section .next-destination__container--titles {
+    margin-left: 10px;
+  }
+  .main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__img--cali {
+    width: 290px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+  }
+  .main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali {
+    width: 290px;
+    height: 220px;
+    background-color: #FFFFFF;
+    border-radius: 5px 5px 10px 10px;
+    position: absolute;
+    box-shadow: 0px 10px 8px rgba(92, 92, 92, 0.2941176471);
+  }
+  .main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--arrow-cali {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--arrow-cali .next-destination__info--price-cali {
+    font-size: 20px;
+    font-weight: 800;
+    color: #10004F;
+    margin-top: 5px;
+  }
+  .main .next-destination__section .next-destination__container--card .next-destination__card--cali .next-destination__info--container-cali .next-destination__info--cali .next-destination__info--arrow-cali .next-destination__info--icon-cali {
+    width: 30px;
+    height: 30px;
+    background-color: #E8114B;
+    border-radius: 30px;
+    margin-left: 80px;
+  }
+  .main .next-destination__section .next-destination__container--card .next-destination__card--sai,
+  .main .next-destination__section .next-destination__container--card .next-destination__card--miami {
+    display: none;
+  }
+  .main .terms-conditions__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 0px 0px;
+  }
+}/*# sourceMappingURL=main.component.css.map */

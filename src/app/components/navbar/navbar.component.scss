@@ -1,0 +1,130 @@
+@import '../main/main.component.scss';
+
+@mixin navbarLinkStyles($decoration, $colorFont, $gap){
+  text-decoration: $decoration;
+  color: $colorFont;
+  gap: $gap;
+}
+
+.navbar {
+  @include widthAndheight(auto,70px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $primary-color;
+  @include fontSizeAndWeight(13px,600);
+  padding: 10px;
+
+  .navbar__link--mobile{
+    display: none;
+  }
+
+  .navbar__menu-button {
+    display: none;
+  }
+
+  .navbar__links {
+
+    @include flexAlign(center);
+    justify-content: flex-start;
+    gap: 30px;
+
+    .navbar__link {
+      transition: 0.3s ease;
+      @include flexAlign(center);
+      @include navbarLinkStyles(none,$secundary-color ,5px);
+
+      &:hover{
+      @include backgroundAndBorderRadiusStyles(rgba(255, 255,255, 0.2), 20px);
+      padding: 8px 0;
+      }
+    }
+  }
+
+  .navbar__login {
+    @include flexAlign(center);
+    justify-content: flex-end;
+    gap: 30px;
+    margin-right: 20px;
+
+    .navbar__link {
+      @include flexAlign(center);
+      @include navbarLinkStyles(none,$secundary-color, 5px);
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .navbar__link--current-currency{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+    .navbar__link--login{
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 30px;
+      padding: 8px 15px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: border-color 0.3s ease;
+
+      &:hover{
+        border: 1px solid $secundary-color;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+}//////////////End navbar section ///////////////////////////////////
+
+@media screen and (max-width: 320px) {
+  .navbar {
+    @include flexAlign(center);
+    flex-direction: row;
+
+    .navbar__menu-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin-left: 8px;
+    }
+
+    .navbar__link {
+      @include flexAlign(center);
+      @include navbarLinkStyles(none,$secundary-color, 5px);
+    }
+
+    .navbar__link--mobile{
+      @include backgroundAndBorderRadiusStyles(rgba(255, 255,255, 0.2), 30px);
+      padding: 5px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: border-color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .navbar__links,
+    .navbar__login {
+      display: none;
+    }
+
+  }//////////////End mobile navbar section ///////////////////////////////////
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
