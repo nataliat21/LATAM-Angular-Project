@@ -52,6 +52,9 @@
   text-decoration: none;
   font-weight: 300;
 }
+.main .products__section .product__link:hover {
+  color: #10004F;
+}
 .main .products__section .product__link .product__icon {
   margin: 8px;
 }
@@ -139,6 +142,9 @@
   font-size: 18px;
   font-weight: 500;
 }
+.main .search-flights__section .choose-destination__section .choose-destination__button:hover {
+  opacity: 0.9;
+}
 .main .support-services__section {
   margin-top: 170px;
   display: flex;
@@ -158,6 +164,10 @@
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
+  transition: transform 0.3s ease;
+}
+.main .support-services__section .support-services__link:hover {
+  transform: translateX(10px);
 }
 .main .support-services__section .support-services__link .support-services__icon {
   margin-right: 10px;
@@ -476,10 +486,18 @@
   border: 1px solid #5C5C5C;
   border-radius: 30px;
 }
+.main .next-destination__section .next-destination__icons .next-destination__icon--arrow-left:hover {
+  background-color: #5C5C5C;
+  stroke: #FFFFFF;
+}
 .main .next-destination__section .next-destination__icons .next-destination__icon--arrow-right {
   margin-left: 40px;
   border: 1px solid #E8114B;
   border-radius: 30px;
+}
+.main .next-destination__section .next-destination__icons .next-destination__icon--arrow-right:hover {
+  background-color: #E8114B;
+  stroke: #FFFFFF;
 }
 .main .next-destination__section .next-destination__icons .next-destination__dots {
   display: flex;
