@@ -39,6 +39,7 @@
   top: 230px;
   left: 20px;
   padding: 5px;
+  /* Hide navigation arrows */
 }
 .main .products__section .products__arrow-right,
 .main .products__section .products__arrow-left {

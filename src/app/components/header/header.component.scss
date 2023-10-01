@@ -1,10 +1,14 @@
 @import '../main/main.component.scss';
 
+//Styles for the header section
 .site-header{
+
+  //General styles for this section
   background-color: $primary-color;
   padding: 10px;
   @include width-and-height(100%,70px);
 
+  //Logo styles
   .site-header__logo{
     margin-top: 10px;
     margin-left: 20px;

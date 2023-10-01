@@ -1,12 +1,15 @@
 @import '../main/main.component.scss';
 
+//Mixin that contains styles that will be applied to the links in the navigation bar
 @mixin navbar-link-styles($decoration, $colorFont, $gap){
   text-decoration: $decoration;
   color: $colorFont;
   gap: $gap;
 }
 
+//Styles for the navbar section
 .navbar {
+  //General navbar styles
   @include width-and-height(auto,70px);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -14,21 +17,27 @@
   @include fontSize-and-weight(13px,600);
   padding: 10px;
 
+  //Hide these style rules in the desktop view
   .navbar__link--mobile{
     display: none;
   }
 
+  //Hide these style rules in the desktop view
   .navbar__menu-button {
     display: none;
   }
 
   .navbar__links {
 
+    //General styles of the links that are part of the navigation bar
     @include flex-align(center);
     justify-content: flex-start;
     gap: 30px;
 
+
     .navbar__link {
+
+      //Styles of each navigation bar link
       transition: 0.3s ease;
       @include flex-align(center);
       @include navbar-link-styles(none,$secundary-color ,5px);
@@ -41,12 +50,16 @@
   }
 
   .navbar__login {
+
+    //General styles of the other links that are part of the navigation bar
     @include flex-align(center);
     justify-content: flex-end;
     gap: 30px;
     margin-right: 20px;
 
     .navbar__link {
+
+      //Styles of each navigation bar link
       @include flex-align(center);
       @include navbar-link-styles(none,$secundary-color, 5px);
 
@@ -54,13 +67,17 @@
         text-decoration: underline;
       }
     }
+
     .navbar__link--current-currency{
+      //Specific style for this icon
       &:hover{
         text-decoration: none;
       }
     }
 
     .navbar__link--login{
+
+      //Specific style for this icon
       background-color: rgba(255, 255, 255, 0.2);
       border-radius: 30px;
       padding: 8px 15px;
@@ -80,11 +97,18 @@
 }//////////////End navbar section ///////////////////////////////////
 
 @media screen and (max-width: 320px) {
+
+  //Styles for the navbar section on mobile
   .navbar {
+
+    //General styles for this section on mobile
     @include flex-align(center);
     flex-direction: row;
 
+
     .navbar__menu-button {
+
+      //Styles on mobile devices for the button that contains the navigation menu
       background: none;
       border: none;
       cursor: pointer;
@@ -92,12 +116,11 @@
       margin-left: 8px;
     }
 
-    .navbar__link {
-      @include flex-align(center);
-      @include navbar-link-styles(none,$secundary-color, 5px);
-    }
-
     .navbar__link--mobile{
+
+      //General style for the login link on mobile devices
+      display: block;
+      @include navbar-link-styles(none,$secundary-color, 5px);
       @include background-and-borderRadius(rgba(255, 255,255, 0.2), 30px);
       padding: 5px;
       cursor: pointer;
@@ -106,6 +129,7 @@
       white-space: nowrap;
     }
 
+    //Hide links from the navigation bar
     .navbar__links,
     .navbar__login {
       display: none;

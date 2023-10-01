@@ -2,13 +2,17 @@
 
 .footer{
 
+  //Styles for the social media section
   .social-media__section{
+
     margin-left: 30px;
 
+    //Rules for social media title
     .social-media__p{
       font-weight: 800;
     }
 
+    //Rules for social media icons
     .social-media__icon{
       margin: 10px 10px 10px 0;
       border-radius: 5px;
@@ -20,6 +24,7 @@
     }
   }///////////////////////////////End social media section//////////////////////////////
 
+  //Styles for the app section
   .app__section{
     margin-left: 30px;
 
@@ -29,7 +34,10 @@
 
   }///////////////////////////////End app section//////////////////////////////
 
+  //Styles for the copyright section
   .copy-right__section{
+
+    //General styles of this section
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
@@ -53,15 +61,20 @@
 
   .footer{
 
+    //Styles for the social media mobile section
     .social-media__section {
       margin-left: 10px;
     } ///////////////////////////////End of the mobile social media section//////////////////////////////
 
+    //Styles for the app mobile section
     .app__section{
       margin-left: 10px;
     }///////////////////////////////End of the mobile app section//////////////////////////////
 
+    //Styles for the copyright mobile section
     .copy-right__section{
+
+      //General styles of this mobile section
       display: grid;
       grid-template-columns: 1fr;
       border-radius: 5px;

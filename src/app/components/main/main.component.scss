@@ -1,3 +1,4 @@
+//Main website colors
 $primary-color: #10004F;
 $secundary-color: #FFFFFF;
 $tertiary-color: #E8114B;
@@ -5,31 +6,37 @@ $quaternary-color:#5C5C5C;
 $primary-text-color: #10004F;
 $secundary-text-color: #5C5C5C;
 
+//Mixin to set flex display and align items
 @mixin flex-align($align){
   display: flex;
   align-items: $align;
 }
 
+//Mixin to set width and height
 @mixin width-and-height($width, $height){
   width: $width;
   height: $height;
 }
 
+//Mixin to set font size and font weight
 @mixin fontSize-and-weight($size,$weight){
   font-size: $size;
   font-weight: $weight;
 }
 
+//ixin to set border and border radius
 @mixin border-and-borderRadius($border,$borderRadius){
   border: $border;
   border-radius: $borderRadius;
 }
 
+//Mixin to set background color and border radius
 @mixin background-and-borderRadius($background, $borderRadius){
   background-color: $background;
   border-radius: $borderRadius;
 }
 
+//Mixin to set position, text color, padding, top, left, and font size
 @mixin positionBox-styles($position,$colorFont,$padding,$top,$left,$fontSize){
   position: $position;
   color: $colorFont;
@@ -39,6 +46,7 @@ $secundary-text-color: #5C5C5C;
   font-size: $fontSize;
 }
 
+//Mixin to set position, text color, top, left, and font size for mobile
 @mixin positionBox-styles-mobile($position,$colorFont,$top,$left,$fontSize){
   position: $position;
   color: $colorFont;
@@ -50,27 +58,32 @@ $secundary-text-color: #5C5C5C;
 .main{
   position: relative;
 
+  //Styles for the promotional section
   .promotional__section{
     position: relative;
 
+    //Styles for the promotional image
     .promotional__image--section{
       @include width-and-height(100%,300px);
       object-fit: cover;
       border-radius: 0 0 30px 30px;
-      filter: opacity(.7)
+      filter: opacity(.7) //Apply opacity to the image
     }
 
+    //Styles for the promotional headline
     .promotional__h1--section {
       @include positionBox-styles(absolute,$primary-color, 10px,20px,30px,25px);
       font-weight: 300;
       line-height: 1.5;
     }
 
+    //Styles for the call-to-action button
     .promotional__a--section {
       @include positionBox-styles(absolute,$primary-color, 10px,170px,30px,18px);
     }
   }///////////////////////////////End promotional section//////////////////////////////
 
+  //Styles for the products section
   .products__section{
     @include background-and-borderRadius($secundary-color,10px);
     @include flex-align(center);
@@ -79,11 +92,13 @@ $secundary-text-color: #5C5C5C;
     left: 20px;
     padding: 5px;
 
+     /* Hide navigation arrows */
     .products__arrow-right,
     .products__arrow-left{
       display: none
     }
 
+    //Styles for product links
     .product__link{
       @include flex-align(center);
       margin: 8px 8px;
@@ -91,16 +106,19 @@ $secundary-text-color: #5C5C5C;
       text-decoration: none;
       font-weight: 300;
 
+      //Change text color on hover
       &:hover{
         color: $primary-text-color;
       }
 
+      //Styles for product icons
       .product__icon{
         margin: 8px;
       }
     }
   }///////////////////////////////End products section//////////////////////////////
 
+  //Styles for the search flights section
   .search-flights__section{
     @include background-and-borderRadius($secundary-color,10px);
     position: absolute;
@@ -109,21 +127,25 @@ $secundary-text-color: #5C5C5C;
     width: auto;
     box-shadow: 0px 10px 8px #5c5c5c4b;
 
+    //Hide mobile section
     .search-flights__section--mobile{
       display: none;
     }
 
+    //Style options section
     .search-flights__options{
       margin: 5px 20px 10px 20px;
       @include flex-align(center);
       justify-content: flex-start;
 
+      // Style individual option elements
       .search-flights__option{
         margin: 20px;
         font-weight: 300;
         color: $primary-text-color;
         @include flex-align(center);
 
+        //Style input elements within options
         .search-flights__input{
           @include width-and-height(20px,20px);
           margin-right: 15px;
@@ -131,9 +153,11 @@ $secundary-text-color: #5C5C5C;
       }
     }
 
+    //Style choose destination section
     .choose-destination__section{
       margin: 10px 20px 15px 20px;
 
+      // Style input fields for origin and destination
       .choose-destination__input--origin,
       .choose-destination__input--destination{
         padding: 15px;
@@ -144,9 +168,12 @@ $secundary-text-color: #5C5C5C;
         @include fontSize-and-weight(18px,300);
       }
 
+      //Style departure option
       .choose-destination__option--departure{
         margin-left: 40px;
         color: $primary-color;
+
+        //Style input field within departure option
         .choose-destination__input--departure{
           padding: 15px;
           width: 200px;
@@ -157,10 +184,12 @@ $secundary-text-color: #5C5C5C;
         }
       }
 
+      //Style comeback option
       .choose-destination__option--comeback{
 
         color: $secundary-text-color;
 
+        //Style input field within comeback option
         .choose-destination__input--comeback{
           padding: 15px;
           width: 200px;
@@ -172,6 +201,7 @@ $secundary-text-color: #5C5C5C;
         }
       }
 
+      // Style search button
       .choose-destination__button{
         padding: 15px;
         margin-left: 25px;
@@ -182,6 +212,7 @@ $secundary-text-color: #5C5C5C;
         color: $secundary-color;
         @include fontSize-and-weight(18px,500);
 
+        //Adjust opacity on hover for interactivity
         &:hover{
           opacity: 0.9;
         }
@@ -189,12 +220,14 @@ $secundary-text-color: #5C5C5C;
     }
   }///////////////////////////////End search flights section//////////////////////////////
 
+  //Styles for the support services section
   .support-services__section{
     margin-top: 170px;
     @include flex-align(center);
     justify-content: center;
     flex-wrap: wrap;
 
+    // Styles for support service links
     .support-services__link{
       @include flex-align(center);
       justify-content: space-between;
@@ -206,10 +239,12 @@ $secundary-text-color: #5C5C5C;
       @include fontSize-and-weight(15px,500);
       transition: transform 0.3s ease;
 
+      //Hover effect to move the link to the right
       &:hover{
         transform: translateX(10px);
       }
 
+      //Styles for the support service icons
       .support-services__icon{
         margin-right: 10px;
         @include background-and-borderRadius(#5c5c5c28,20px);
@@ -217,27 +252,32 @@ $secundary-text-color: #5C5C5C;
     }
   }///////////////////////////////End support services section//////////////////////////////
 
+  //Styles for the next destination section
   .next-destination__section{
 
     .next-destination__container--titles{
       margin: 40px 0px 0px 40px;
 
+      // Styles for the main heading
       .next-destination__h2{
         font-weight: 500;
         color: $primary-text-color;
       }
 
+      //Styles for the paragraph about accumulating LATAM Pass Miles and Qualifying Points
       .next-destination__p--miles{
         @include fontSize-and-weight(17px,400);
         color: $secundary-text-color;
         margin-bottom: 30px;
       }
 
+      //Styles for the paragraph about flight offers from a specific location
       .next-destination__p--offers{
         @include fontSize-and-weight(17px,400);
         @include flex-align(center);
         color: $secundary-text-color;
 
+        //Styles for the link to a specific location
         .next-destination__link{
           color: #4658E5;
           font-weight: 800;
@@ -245,10 +285,12 @@ $secundary-text-color: #5C5C5C;
       }
     }
 
+    //Container for next destination cards
     .next-destination__container--card{
       @include flex-align(center);
       justify-content: space-evenly;
 
+      //Styles for Cali card
       .next-destination__card--cali{
         position: relative;
         transition: transform 0.3s ease;
@@ -257,6 +299,7 @@ $secundary-text-color: #5C5C5C;
           transform: translateY(-5px);
         }
 
+        //Styles for Cali card image
         .next-destination__img--cali{
           @include width-and-height(400px,200px);
           object-fit: cover;
@@ -264,6 +307,7 @@ $secundary-text-color: #5C5C5C;
           position: relative;
         }
 
+        //Styles for Cali card travel date
         .next-destination__section--travel-date-cali{
           @include background-and-borderRadius(#DFE2F6,10px 10px 0px 0px);
           position: absolute;
@@ -278,12 +322,14 @@ $secundary-text-color: #5C5C5C;
           }
         }
 
+        //Styles for Cali card information container
         .next-destination__info--container-cali{
           @include background-and-borderRadius($secundary-color,5px 5px 10px 10px);
           @include width-and-height(400px,220px);
           position: absolute;
           box-shadow: 0px 10px 8px #5c5c5c4b;
 
+          //Styles for Cali card information
           .next-destination__info--cali{
             margin-left: 10px;
 
@@ -312,6 +358,7 @@ $secundary-text-color: #5C5C5C;
               font-weight: 300;
             }
 
+            //Styles for Cali card price and icon
             .next-destination__info--arrow-cali{
               display: flex;
               justify-content: flex-start;
@@ -343,6 +390,7 @@ $secundary-text-color: #5C5C5C;
         }
       }
 
+      //Styles for sai card
       .next-destination__card--sai{
         position: relative;
         transition: transform 0.3s ease;
@@ -351,6 +399,7 @@ $secundary-text-color: #5C5C5C;
           transform: translateY(-5px);
         }
 
+        //Styles for sai card image
         .next-destination__img--sai{
           @include width-and-height(400px,200px);
           object-fit: cover;
@@ -358,6 +407,7 @@ $secundary-text-color: #5C5C5C;
           position: relative;
         }
 
+        //Styles for sai card travel date
         .next-destination__section--travel-date-sai{
           position: absolute;
           top: 170px;
@@ -372,12 +422,14 @@ $secundary-text-color: #5C5C5C;
           }
         }
 
+        //Styles for sai card information container
         .next-destination__info--container-sai{
           @include background-and-borderRadius($secundary-color,5px 5px 10px 10px);
           @include width-and-height(400px,220px);
           position: absolute;
           box-shadow: 0px 10px 8px #5c5c5c4b;
 
+          //Styles for sai card information
           .next-destination__info--sai{
             margin-left: 10px;
 
@@ -406,6 +458,7 @@ $secundary-text-color: #5C5C5C;
               font-weight: 300;
             }
 
+            //Styles for sai card price and icon
             .next-destination__info--arrow-sai{
               display: flex;
               justify-content: flex-start;
@@ -437,6 +490,7 @@ $secundary-text-color: #5C5C5C;
         }
       }
 
+      //Styles for miami card
       .next-destination__card--miami{
         position: relative;
         transition: transform 0.3s ease;
@@ -445,6 +499,7 @@ $secundary-text-color: #5C5C5C;
           transform: translateY(-5px);
         }
 
+        //Styles for miami card image
         .next-destination__img--miami{
           @include width-and-height(400px,200px);
           object-fit: cover;
@@ -452,6 +507,7 @@ $secundary-text-color: #5C5C5C;
           position: relative;
         }
 
+        //Styles for miami card travel date
         .next-destination__section--travel-date-miami{
           position: absolute;
           top: 170px;
@@ -466,12 +522,14 @@ $secundary-text-color: #5C5C5C;
           }
         }
 
+        //Styles for miami card information container
         .next-destination__info--container-miami{
           @include background-and-borderRadius($secundary-color,5px 5px 10px 10px);
           @include width-and-height(400px,220px);
           position: absolute;
           box-shadow: 0px 10px 8px #5c5c5c4b;
 
+          //Styles for miami card information
           .next-destination__info--miami{
             margin-left: 10px;
 
@@ -500,6 +558,7 @@ $secundary-text-color: #5C5C5C;
               font-weight: 300;
             }
 
+            //Styles for miami card price and icon
             .next-destination__info--arrow-miami{
               display: flex;
               justify-content: flex-start;
@@ -532,42 +591,50 @@ $secundary-text-color: #5C5C5C;
       }
     }
 
+    //Styling for the container of next destination icons
     .next-destination__icons{
       margin-top: 260px;
       display: flex;
       justify-content: center;
 
+      //Styling for the left arrow icon
       .next-destination__icon--arrow-left{
         margin-right: 30px;
         @include border-and-borderRadius(1px solid $quaternary-color,30px);
 
+        //Hover effect for the left arrow icon
         &:hover{
           background-color: $quaternary-color;
           stroke: $secundary-color;
         }
       }
 
+      //Styling for the right arrow icon
       .next-destination__icon--arrow-right{
         margin-left: 40px;
         @include border-and-borderRadius(1px solid $tertiary-color, 30px);
 
+        //Hover effect for the right arrow icon
         &:hover{
           background-color: $tertiary-color;
           stroke: $secundary-color;
         }
       }
 
+      // Styling for the container of dots
       .next-destination__dots{
         @include flex-align(center);
       }
     }
   }///////////////////////////////End next destination section//////////////////////////////
 
+  //Styles for the nterms and conditions section
   .terms-conditions__section{
     @include flex-align(center);
     justify-content: flex-end;
     margin-right: 60px;
 
+    //Link for the terms and conditions
     .terms-conditions__link{
       text-decoration: none;
       color: #4658E5;
@@ -580,27 +647,33 @@ $secundary-text-color: #5C5C5C;
 @media screen and (max-width: 320px) {
   .main{
 
+    //Styles for the main promotional section on mobile devices
     .promotional__section{
 
+      //Apply a sepia filter to the promotional image on mobile
       .promotional__image--section{
         filter: sepia(30%);
       }
 
+      //Styles for the promotional headline on mobile
       .promotional__h1--section{
         @include positionBox-styles-mobile(absolute,$secundary-color,5px,10px,20px);
         font-weight: 300;
       }
 
+      //Styles for the call-to-action button on mobile
       .promotional__a--section {
         @include positionBox-styles-mobile(absolute,$secundary-color,190px,8px,18px);
       }
     } ///////////////////////////////End of the mobile promotional section//////////////////////////////
 
+    //Styles for the products section on mobile
     .products__section{
       margin-top: 10px;
       left: 5px;
       right: 5px;
 
+      //Styles for the left arrow
       .products__arrow-left{
         display: block;
         @include background-and-borderRadius(#5c5c5c4b,30px);
@@ -608,6 +681,7 @@ $secundary-text-color: #5C5C5C;
         @include width-and-height(30px,30px);
         justify-content: center;
 
+        //Styles for the left arrow icon
         .products__arrow--icon-left{
           @include background-and-borderRadius($quaternary-color,30px);
           @include flex-align(center);
@@ -615,6 +689,8 @@ $secundary-text-color: #5C5C5C;
         }
       }
 
+
+      //Styles for the right arrow
       .products__arrow-right{
         display: block;
         @include background-and-borderRadius($tertiary-color,30px);
@@ -622,6 +698,7 @@ $secundary-text-color: #5C5C5C;
         justify-content: center;
         @include width-and-height(30px,30px);
 
+        //Styles for the right arrow icon
         .products__arrow--icon-right{
           @include background-and-borderRadius($secundary-color,30px);
           @include flex-align(center);
@@ -629,19 +706,24 @@ $secundary-text-color: #5C5C5C;
         }
       }
 
+      //Styles for product links
       .product__link{
         margin: 9px 10px;
+
+        //Hide product icons
         .product__icon{
           display: none;
         }
       }
 
+      //Styles for specific product links
       .product__link--flights{
         color: $primary-text-color;
         font-weight: 600;
         border-bottom: 2px solid $tertiary-color;
       }
 
+      //Hide certain product links
       .product__link--cars,
       .product__link--travel-insurance,
       .product__link--upgrade{
@@ -649,15 +731,18 @@ $secundary-text-color: #5C5C5C;
       }
     }///////////////////////////////End of the mobile products section//////////////////////////////
 
+    //Styles for the search flights section on mobile
     .search-flights__section{
       top: 280px;
       left: 5px;
       right: 5px;
       border-radius: 0px 0px 10px 10px;
 
+      //Style the mobile section, making it visible
       .search-flights__section--mobile{
         display: block;
 
+        //Style the mobile section header
         .search-flights__h2--mobile{
           color: $primary-text-color;
           @include fontSize-and-weight(20px,500);
@@ -666,11 +751,13 @@ $secundary-text-color: #5C5C5C;
           font-style: oblique;
         }
 
+        //Style the options section within mobile
         .search-flights__options--mobile{
           @include flex-align(center);
           justify-content: space-evenly;
           margin-bottom: 5px;
 
+          //Style individual mobile options
           .search-flights__option--mobile{
             @include flex-align(center);
             color: $secundary-text-color;
@@ -678,12 +765,15 @@ $secundary-text-color: #5C5C5C;
           }
         }
 
+        //Style the choose destination section within mobile
         .choose-destination__section--mobile{
 
+          //Style the origin input section within mobile
           .choose-destination__origin--mobile{
             @include flex-align(center);
             justify-content: center;
 
+            // Style the origin input field within mobile
             .choose-destination__input--origin-mobile{
               padding: 5px;
               width: 170px;
@@ -693,13 +783,14 @@ $secundary-text-color: #5C5C5C;
               @include fontSize-and-weight(15px,300);
 
             }
-
           }
 
+          //Style the destination input section within mobile
           .choose-destination__destination--mobile{
             @include flex-align(center);
             justify-content: center;
 
+            // Style the destination input field within mobile
             .choose-destination__input--destination-mobile{
               padding: 5px;
               width: 170px;
@@ -712,6 +803,7 @@ $secundary-text-color: #5C5C5C;
         }
       }
 
+      //Hide options and choose destination sections in non-mobile view
       .search-flights__options{
         display: none;
       }
@@ -721,22 +813,27 @@ $secundary-text-color: #5C5C5C;
       }
     }///////////////////////////////End of the mobile search flights section//////////////////////////////
 
+    //Styles for the support services section on mobile
     .support-services__section{
       margin-top: 150px;
       display: grid;
       grid-template-columns: auto;
     }///////////////////////////////End of the mobile support services section//////////////////////////////
 
+    //Styles for the next destination section on mobile
     .next-destination__section{
 
       .next-destination__container--titles{
         margin-left: 10px;
       }
 
+      //Container for next destination cards on mobile devices
       .next-destination__container--card{
 
+        //Styles for Cali card
         .next-destination__card--cali{
 
+          //Styles for Cali card image on mobile
           .next-destination__img--cali{
             @include width-and-height(290px,200px);
             object-fit: cover;
@@ -744,23 +841,29 @@ $secundary-text-color: #5C5C5C;
             position: relative;
           }
 
+          // Styles for Cali card information container on mobile
           .next-destination__info--container-cali{
             @include width-and-height(290px,220px);
             @include background-and-borderRadius($secundary-color,5px 5px 10px 10px );
             position: absolute;
             box-shadow: 0px 10px 8px #5c5c5c4b;
 
+            //Styles for Cali card information on mobile
             .next-destination__info--cali{
+
+              //Styles for arrow and price on mobile
               .next-destination__info--arrow-cali{
                 display: flex;
                 justify-content: flex-start;
 
+                // Styles for price on mobile
                 .next-destination__info--price-cali{
                   @include fontSize-and-weight(20px,800);
                   color: $primary-text-color;
                   margin-top: 5px;
                 }
 
+                //Styles for icon on mobile
                 .next-destination__info--icon-cali{
                   @include width-and-height(30px,30px);
                   @include background-and-borderRadius($tertiary-color,30px);
@@ -771,6 +874,7 @@ $secundary-text-color: #5C5C5C;
           }
         }
 
+        //Styles for SAI card and Miami card (both hidden on mobile)
         .next-destination__card--sai,
         .next-destination__card--miami{
           display: none;
@@ -778,6 +882,7 @@ $secundary-text-color: #5C5C5C;
       }
     }///////////////////////////////End of the mobile next destination section//////////////////////////////
 
+    //Styles for the terms and conditions section on mobile
     .terms-conditions__section{
       @include flex-align(center);
       justify-content: center;
