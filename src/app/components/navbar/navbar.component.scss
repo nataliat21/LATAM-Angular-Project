@@ -34,8 +34,8 @@
       @include navbarLinkStyles(none,$secundary-color ,5px);
 
       &:hover{
-      @include backgroundAndBorderRadiusStyles(rgba(255, 255,255, 0.2), 20px);
-      padding: 8px 0;
+        @include backgroundAndBorderRadiusStyles(rgba(255, 255,255, 0.2), 20px);
+        padding: 8px 0;
       }
     }
   }

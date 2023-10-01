@@ -246,8 +246,8 @@ $secundary-text-color: #5C5C5C;
     }
 
     .next-destination__container--card{
-    @include flexAlign(center);
-    justify-content: space-evenly;
+      @include flexAlign(center);
+      justify-content: space-evenly;
 
       .next-destination__card--cali{
         position: relative;
@@ -259,87 +259,87 @@ $secundary-text-color: #5C5C5C;
 
         .next-destination__img--cali{
           @include widthAndheight(400px,200px);
-            object-fit: cover;
-            border-radius: 20px;
-            position: relative;
+          object-fit: cover;
+          border-radius: 20px;
+          position: relative;
         }
 
         .next-destination__section--travel-date-cali{
-            @include backgroundAndBorderRadiusStyles(#DFE2F6,10px 10px 0px 0px);
-            position: absolute;
-            top: 170px;
-            @include widthAndheight(100%,40px);
-            @include flexAlign(center);
-            justify-content: flex-start;
+          @include backgroundAndBorderRadiusStyles(#DFE2F6,10px 10px 0px 0px);
+          position: absolute;
+          top: 170px;
+          @include widthAndheight(100%,40px);
+          @include flexAlign(center);
+          justify-content: flex-start;
 
-            .next-destination__p--travel-date-cali{
-              color: $secundary-text-color;
-              padding-left: 10px;
-            }
+          .next-destination__p--travel-date-cali{
+            color: $secundary-text-color;
+            padding-left: 10px;
+          }
         }
 
         .next-destination__info--container-cali{
-            @include backgroundAndBorderRadiusStyles($secundary-color,5px 5px 10px 10px);
-            @include widthAndheight(400px,220px);
-            position: absolute;
-            box-shadow: 0px 10px 8px #5c5c5c4b;
+          @include backgroundAndBorderRadiusStyles($secundary-color,5px 5px 10px 10px);
+          @include widthAndheight(400px,220px);
+          position: absolute;
+          box-shadow: 0px 10px 8px #5c5c5c4b;
 
-            .next-destination__info--cali{
-              margin-left: 10px;
+          .next-destination__info--cali{
+            margin-left: 10px;
 
-              .next-destination__info--city-cali{
+            .next-destination__info--city-cali{
+              color: $primary-text-color;
+              @include fontSizeAndWeight(30px,500);
+              margin-top: 5px;
+            }
+
+            .next-destination__info--one-way-cali{
+              font-size: 17px;
+              color: #4658E5;
+              @include backgroundAndBorderRadiusStyles(#4659e52d,20px);
+              padding: 5px;
+            }
+
+            .next-destination__info--economy-cali{
+              @include fontSizeAndWeight(17px,300);
+              @include backgroundAndBorderRadiusStyles(#5c5c5c4b,20px);
+              padding: 5px;
+              margin: 5px;
+            }
+
+            .next-destination__info--final-price-cali{
+              color: $secundary-text-color;
+              font-weight: 300;
+            }
+
+            .next-destination__info--arrow-cali{
+              display: flex;
+              justify-content: flex-start;
+
+              .next-destination__info--price-cali{
+                @include fontSizeAndWeight(20px,800);
                 color: $primary-text-color;
-                @include fontSizeAndWeight(30px,500);
                 margin-top: 5px;
               }
 
-              .next-destination__info--one-way-cali{
-                font-size: 17px;
-                color: #4658E5;
-                @include backgroundAndBorderRadiusStyles(#4659e52d,20px);
-                padding: 5px;
-              }
-
-              .next-destination__info--economy-cali{
-                @include fontSizeAndWeight(17px,300);
-                @include backgroundAndBorderRadiusStyles(#5c5c5c4b,20px);
-                padding: 5px;
-                margin: 5px;
-              }
-
-              .next-destination__info--final-price-cali{
-                color: $secundary-text-color;
-                font-weight: 300;
-              }
-
-              .next-destination__info--arrow-cali{
-                display: flex;
-                justify-content: flex-start;
-
-                .next-destination__info--price-cali{
-                  @include fontSizeAndWeight(20px,800);
-                  color: $primary-text-color;
-                  margin-top: 5px;
-                }
-
-                .next-destination__info--icon-cali{
-                  @include backgroundAndBorderRadiusStyles($tertiary-color, 30px);
-                  margin-left: 180px;
-                }
-              }
-
-              .next-destination__info--taxes-cali{
-                color: $secundary-text-color;
-                font-weight: 300;
-                margin-right: 10px;
-                margin-top: 10px;
-              }
-
-              .next-destination__info--direct-flight-cali{
-                color: $secundary-text-color;
-                font-weight: 300;
+              .next-destination__info--icon-cali{
+                @include backgroundAndBorderRadiusStyles($tertiary-color, 30px);
+                margin-left: 180px;
               }
             }
+
+            .next-destination__info--taxes-cali{
+              color: $secundary-text-color;
+              font-weight: 300;
+              margin-right: 10px;
+              margin-top: 10px;
+            }
+
+            .next-destination__info--direct-flight-cali{
+              color: $secundary-text-color;
+              font-weight: 300;
+            }
+          }
         }
       }
 
@@ -658,7 +658,6 @@ $secundary-text-color: #5C5C5C;
       .search-flights__section--mobile{
         display: block;
 
-
         .search-flights__h2--mobile{
           color: $primary-text-color;
           @include fontSizeAndWeight(20px,500);
@@ -709,7 +708,6 @@ $secundary-text-color: #5C5C5C;
               font-family: 'Roboto', sans-serif;
               @include fontSizeAndWeight(15px,300);
             }
-
           }
         }
       }
