@@ -789,14 +789,11 @@
     display: block;
     margin-left: 8px;
   }
-  .navbar .navbar__link {
-    display: flex;
-    align-items: center;
+  .navbar .navbar__link--mobile {
+    display: block;
     text-decoration: none;
     color: #FFFFFF;
     gap: 5px;
-  }
-  .navbar .navbar__link--mobile {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     padding: 5px;
