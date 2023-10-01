@@ -1,17 +1,17 @@
 @import '../main/main.component.scss';
 
-@mixin navbarLinkStyles($decoration, $colorFont, $gap){
+@mixin navbar-link-styles($decoration, $colorFont, $gap){
   text-decoration: $decoration;
   color: $colorFont;
   gap: $gap;
 }
 
 .navbar {
-  @include widthAndheight(auto,70px);
+  @include width-and-height(auto,70px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: $primary-color;
-  @include fontSizeAndWeight(13px,600);
+  @include fontSize-and-weight(13px,600);
   padding: 10px;
 
   .navbar__link--mobile{
@@ -24,31 +24,31 @@
 
   .navbar__links {
 
-    @include flexAlign(center);
+    @include flex-align(center);
     justify-content: flex-start;
     gap: 30px;
 
     .navbar__link {
       transition: 0.3s ease;
-      @include flexAlign(center);
-      @include navbarLinkStyles(none,$secundary-color ,5px);
+      @include flex-align(center);
+      @include navbar-link-styles(none,$secundary-color ,5px);
 
       &:hover{
-        @include backgroundAndBorderRadiusStyles(rgba(255, 255,255, 0.2), 20px);
+        @include background-and-borderRadius(rgba(255, 255,255, 0.2), 20px);
         padding: 8px 0;
       }
     }
   }
 
   .navbar__login {
-    @include flexAlign(center);
+    @include flex-align(center);
     justify-content: flex-end;
     gap: 30px;
     margin-right: 20px;
 
     .navbar__link {
-      @include flexAlign(center);
-      @include navbarLinkStyles(none,$secundary-color, 5px);
+      @include flex-align(center);
+      @include navbar-link-styles(none,$secundary-color, 5px);
 
       &:hover{
         text-decoration: underline;
@@ -81,7 +81,7 @@
 
 @media screen and (max-width: 320px) {
   .navbar {
-    @include flexAlign(center);
+    @include flex-align(center);
     flex-direction: row;
 
     .navbar__menu-button {
@@ -93,12 +93,12 @@
     }
 
     .navbar__link {
-      @include flexAlign(center);
-      @include navbarLinkStyles(none,$secundary-color, 5px);
+      @include flex-align(center);
+      @include navbar-link-styles(none,$secundary-color, 5px);
     }
 
     .navbar__link--mobile{
-      @include backgroundAndBorderRadiusStyles(rgba(255, 255,255, 0.2), 30px);
+      @include background-and-borderRadius(rgba(255, 255,255, 0.2), 30px);
       padding: 5px;
       cursor: pointer;
       border: 1px solid transparent;

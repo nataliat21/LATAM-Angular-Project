@@ -34,7 +34,7 @@
     grid-template-columns: 1fr 1fr;
     place-items: center;
     margin-top: 20px;
-    @include backgroundAndBorderRadiusStyles(#E7E8EA, 10px);
+    @include background-and-borderRadius(#E7E8EA, 10px);
     border: 1px solid #5c5c5c8f;
     padding: 20px;
     box-shadow: 0px -5px 4px -1px rgba(128, 128, 128, 0.473);
@@ -42,7 +42,7 @@
     .copy-right__p{
 
       .copy-right__p--text{
-        @include fontSizeAndWeight(12px,300);
+        @include fontSize-and-weight(12px,300);
         margin: 10px;
       }
     }
